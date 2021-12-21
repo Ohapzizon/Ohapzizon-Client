@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const InputWrapper = styled.div`
-  width: 40vh;
+  width: 21.2%;
+  height: 8%;
   position: relative;
 `;
 
