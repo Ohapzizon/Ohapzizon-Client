@@ -11,7 +11,7 @@ const Input: React.FC<input> = ({ type, label }) => {
     <>
       <s.InputWrapper>
         <s.Input type={type} autoComplete="off" required />
-        <s.Label>ID</s.Label>
+        <s.Label>{label}</s.Label>
       </s.InputWrapper>
     </>
   );
