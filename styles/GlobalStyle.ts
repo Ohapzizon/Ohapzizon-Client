@@ -24,10 +24,11 @@ export const GlobalStyle: GlobalStyleComponent<
     margin: 0;
     padding: 0;
     border: 0;
+  }
+  body{
     width: 100%;
     height: 100%;
   }
-
   input:focus,
   select:focus,
   textarea:focus,
