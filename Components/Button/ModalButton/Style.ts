@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Config from "../../../Constants/Config.json";
 
 export const Button = styled.button`
-  width: 10%;
-  height: 3vh;
+  width: 7%;
+  height: 20%;
   margin-right: 1vh;
   border-radius: 5px;
   border: none;

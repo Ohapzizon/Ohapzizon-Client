@@ -3,7 +3,7 @@ import Config from "../../Constants/Config.json";
 
 export const LoginWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 65rem;
   display: flex;
   justify-content: center;
   align-items: center;

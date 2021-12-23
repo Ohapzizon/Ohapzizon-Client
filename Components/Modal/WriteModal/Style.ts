@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Config from "../../../Constants/Config.json";
 
-export const ModalWrapper = styled.div``;
+export const ModalWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 export const Dropdown = styled.div`
   display: flex;
@@ -22,7 +25,7 @@ export const DropdownSelect = styled.div`
 
   margin-left: 0.5%;
   width: 4%;
-  height: 2.7vh;
+  height: 2rem;
   border-radius: 3px;
   background-color: ${Config.COLOR.BLUE};
 
@@ -39,6 +42,8 @@ export const DropdownSelect = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-left: 25.7%;
+  width: 100%;
+  height: 13rem;
+  margin-left: 26.6%;
   margin-top: 1.2vh;
 `;
