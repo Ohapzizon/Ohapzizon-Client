@@ -6,11 +6,6 @@ type ButtonProps = {
   className: string;
 };
 
-interface Button {
-  name: ButtonProps;
-  className: ButtonProps;
-}
-
 const Button: React.FC<ButtonProps> = ({ className, name }) => {
   return (
     <>
