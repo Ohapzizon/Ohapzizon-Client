@@ -2,6 +2,8 @@ import React from "react";
 import Input from "../../Input/Modal/Input";
 import * as s from "./Style";
 import * as i from "../../../Assets/index";
+import TextInput from "../../Input/TextInput/TextInput";
+import ModalButton from "../../Button/ModalButton/ModalButton";
 
 const WriteModal = () => {
   return (
@@ -14,6 +16,11 @@ const WriteModal = () => {
           <i.Dropdown className="Image" />
         </s.DropdownSelect>
       </s.Dropdown>
+      <TextInput />
+      <s.ButtonWrapper>
+        <ModalButton text="취소" className="cancel" />
+        <ModalButton text="땡겨!!" className="check" />
+      </s.ButtonWrapper>
     </s.ModalWrapper>
   );
 };

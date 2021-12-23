@@ -18,10 +18,11 @@ export const DropdownSelect = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -0.3vh;
 
   margin-left: 0.5%;
   width: 4%;
-  height: 50%;
+  height: 2.7vh;
   border-radius: 3px;
   background-color: ${Config.COLOR.BLUE};
 
@@ -33,5 +34,11 @@ export const DropdownSelect = styled.div`
 
   .Image {
     margin-left: 2vh;
+    cursor: pointer;
   }
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-left: 25.7%;
+  margin-top: 1.2vh;
 `;
