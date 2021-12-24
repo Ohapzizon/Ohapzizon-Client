@@ -5,7 +5,7 @@ export const Button = styled.button`
   display: flex;
   text-align: center;
   width: 22.3%;
-  height: 7%;
+  height: 5vh;
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: 400;
@@ -13,12 +13,10 @@ export const Button = styled.button`
   color: ${Config.COLOR.BLACK};
 
   p {
-    width: 50%;
-    height: 0%;
-    margin-top: 5.4%;
+    margin-top: 2.8%;
   }
   .google {
-    margin-top: 3.7%;
+    margin-top: 1.4%;
   }
   .items {
     margin-left: 12%;
