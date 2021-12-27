@@ -38,10 +38,6 @@ export const DropdownSelect = styled.select`
   font-size: 18px;
   font-weight: bold;
 
-  ::-ms-expand {
-    display: none;
-  }
-
   .icon {
     cursor: pointer;
   }
