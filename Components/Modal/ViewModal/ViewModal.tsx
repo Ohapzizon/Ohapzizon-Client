@@ -1,9 +1,8 @@
 import React from "react";
 import * as s from "./Style";
-import TextInput from "../../Input/TextInput/TextInput";
 import ModalButton from "../../Button/ModalButton/ModalButton";
 
-const WriteModal = () => {
+const ViewModal = () => {
   return (
     <s.ModalWrapper>
       <s.Title>점축 땡길 사람?</s.Title>
@@ -20,4 +19,4 @@ const WriteModal = () => {
   );
 };
 
-export default WriteModal;
+export default ViewModal;

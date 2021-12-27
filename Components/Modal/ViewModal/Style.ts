@@ -35,7 +35,7 @@ export const Text = styled.p`
   margin-top: 1rem;
   margin-left: 0.5rem;
   font-size: 16px;
-  font-family: "Poppins";
+  font-family: "Noto Sans KR";
   font-weight: bold;
   font-style: italic;
 `;
