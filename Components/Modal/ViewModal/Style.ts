@@ -8,7 +8,7 @@ export const ModalWrapper = styled.div`
 
 export const Title = styled.p`
   font-size: 36px;
-  font-family: "Poppins";
+  font-family: "Noto Sans KR";
   font-weight: bold;
   font-style: italic;
   color: ${Config.COLOR.BLACK};
@@ -17,7 +17,7 @@ export const Title = styled.p`
 export const People = styled.p`
   margin-top: 0.5rem;
   font-size: 16px;
-  font-family: "Poppins";
+  font-family: "Noto Sans KR";
   font-weight: bold;
   font-style: italic;
   color: ${Config.COLOR.BLACK};
