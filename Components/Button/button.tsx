@@ -1,10 +1,15 @@
 import React from "react";
 import * as s from "./Style";
 
-const Button = () => {
+type ButtonProps = {
+  name: string;
+  className: string;
+};
+
+const Button: React.FC<ButtonProps> = ({ className, name }) => {
   return (
     <>
-      <s.Button>로그인</s.Button>
+      <s.Button className={className}>{name}</s.Button>
     </>
   );
 };
