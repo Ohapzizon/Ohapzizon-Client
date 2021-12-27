@@ -1,6 +1,10 @@
 import Head from "next/head";
-import styled from "styled-components";
+import Active from "../Components/Active/Active";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Active />
+    </>
+  );
 }
