@@ -1,9 +1,31 @@
 import React from "react";
 import Input from "../../Input/Modal/Input";
 import * as s from "./Style";
-import * as i from "../../../Assets/index";
 import TextInput from "../../Input/TextInput/TextInput";
 import ModalButton from "../../Button/ModalButton/ModalButton";
+
+const people = [
+  "선택",
+  "1명",
+  "2명",
+  "3명",
+  "4명",
+  "5명",
+  "6명",
+  "7명",
+  "8명",
+  "10명",
+  "11명",
+  "12명",
+  "13명",
+  "14명",
+  "15명",
+  "16명",
+  "17명",
+  "18명",
+  "19명",
+  "20명",
+];
 
 const WriteModal = () => {
   return (
@@ -12,8 +34,9 @@ const WriteModal = () => {
       <s.Dropdown>
         <p>인원수</p>
         <s.DropdownSelect>
-          <span>선택</span>
-          <i.Dropdown className="Image" />
+          {people.map((people) => (
+            <s.DropdownOption>{people}</s.DropdownOption>
+          ))}
         </s.DropdownSelect>
       </s.Dropdown>
       <TextInput />
