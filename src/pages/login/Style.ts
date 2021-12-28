@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Config from "../../Constants/Config.json";
+import Config from "../../../Constants/Config.json";
 
 export const LoginWrapper = styled.div`
   width: 100%;

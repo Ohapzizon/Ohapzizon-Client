@@ -34,8 +34,8 @@ const WriteModal = () => {
       <s.Dropdown>
         <p>인원수</p>
         <s.DropdownSelect>
-          {people.map((people) => (
-            <s.DropdownOption>{people}</s.DropdownOption>
+          {people.map((people, idx) => (
+            <s.DropdownOption key={idx}>{people}</s.DropdownOption>
           ))}
         </s.DropdownSelect>
       </s.Dropdown>
