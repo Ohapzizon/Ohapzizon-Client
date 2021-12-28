@@ -3,8 +3,8 @@ import * as React from "react";
 function LogoBlack(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="9.5vw"
-      height="5.8vh"
+      width="180px"
+      height="55px"
       viewBox="0 0 134 58"
       fill="none"
       {...props}
