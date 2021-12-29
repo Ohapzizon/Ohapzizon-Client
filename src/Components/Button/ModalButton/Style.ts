@@ -7,7 +7,7 @@ type StyleProps = {
 
 export const Button = styled.button<StyleProps>`
   width: 17%;
-  height: 5%;
+  height: 100%;
   margin-right: 1vh;
   border-radius: 5px;
   border: none;

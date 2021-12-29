@@ -1,14 +1,41 @@
 import styled from "styled-components";
 import Config from "../../../Constants/Config.json";
 
-export const ModalWrapper = styled.div`
-  width: 100%;
-  height: 100%;
+type StyleProps = {
+  visible?: boolean;
+};
+
+export const ModalOverlay = styled.div<StyleProps>`
+  display: ${(props) => (props.visible ? "block" : "none")};
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: ${Config.COLOR.SUPERLIGHTGRAY};
+  opacity: 0.1;
+`;
+
+export const ModalWrapper = styled.div<StyleProps>`
+  width: 45%;
+  height: 80%;
+  display: ${(props) => (props.visible ? "block" : "none")};
+  z-index: 1000;
+  position: fixed;
+  top: 10%;
+  left: 28%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: ${Config.COLOR.WHITE};
+  border-radius: 10px;
 `;
 
 export const Dropdown = styled.div`
   display: flex;
-  margin-top: 0.7%;
+  margin-top: 1.3vh;
   position: relative;
 
   p {
@@ -30,7 +57,7 @@ export const DropdownSelect = styled.select`
   margin-top: -0.43vh;
 
   margin-left: 0.5%;
-  width: 4%;
+  width: 10%;
   height: 2rem;
   border-radius: 3px;
   background-color: ${Config.COLOR.BLUE};
@@ -52,7 +79,7 @@ export const DropdownOption = styled.option`
 
 export const ButtonWrapper = styled.div`
   width: 100%;
-  height: 13rem;
-  margin-left: 26.6%;
-  margin-top: 1.2vh;
+  height: 6%;
+  margin-left: 65.3%;
+  margin-top: -4vh;
 `;
