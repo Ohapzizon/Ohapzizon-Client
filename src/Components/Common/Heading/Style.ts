@@ -2,12 +2,13 @@ import styled from "styled-components";
 import Config from "../../../Constants/Config.json";
 
 export const Positioner = styled.div`
-  width: 100%;
-  height: 70px;
-  margin: 160px auto;
-  margin-left: 64px;
   display: flex;
+  width: 100%;
+  height: 200px;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
+  padding: 160px 5% 70px;
 `;
 
 export const HeadingTitle = styled.h1`
@@ -24,7 +25,7 @@ export const HeadingText = styled.div`
 
 export const RecruitBtn = styled.button`
   width: 140px;
-  height: 100%;
+  height: 25%;
   font-size: 18px;
   background-color: ${Config.COLOR.BLUE};
   color: ${Config.COLOR.WHITE};

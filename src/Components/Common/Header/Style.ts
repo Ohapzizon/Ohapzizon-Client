@@ -14,7 +14,7 @@ export const Positioner = styled.header`
   background-color: ${Config.COLOR.WHITE};
 
   svg {
-    margin-left: 65px;
+    margin-left: 5%;
   }
 `;
 
@@ -22,6 +22,6 @@ export const Nav = styled.nav`
   font-family: "Noto Sans KR";
   font-size: 20px;
   font-weight: 500;
-  margin-right: 70px;
+  margin-right: 5%;
   cursor: pointer;
 `;
