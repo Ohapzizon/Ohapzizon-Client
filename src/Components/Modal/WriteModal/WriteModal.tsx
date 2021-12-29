@@ -41,8 +41,8 @@ const WriteModal = () => {
       </s.Dropdown>
       <TextInput />
       <s.ButtonWrapper>
-        <ModalButton text="취소" className="cancel" />
-        <ModalButton text="땡겨!!" className="check" />
+        <ModalButton text="취소" btnType={"cancel"} />
+        <ModalButton text="땡겨!!" btnType={"pull"} />
       </s.ButtonWrapper>
     </s.ModalWrapper>
   );

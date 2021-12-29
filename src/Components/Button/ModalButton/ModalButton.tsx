@@ -3,13 +3,13 @@ import * as s from "./Style";
 
 type modalbutton = {
   text: string;
-  className: string;
+  btnType: string;
   onClick?: (e) => void;
 };
 
-const ModalButton: React.FC<modalbutton> = ({ text, className, onClick }) => {
+const ModalButton: React.FC<modalbutton> = ({ text, btnType, onClick }) => {
   return (
-    <s.Button className={className} onClick={onClick}>
+    <s.Button onClick={onClick} btnType={btnType}>
       {text}
     </s.Button>
   );

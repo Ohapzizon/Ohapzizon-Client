@@ -34,7 +34,7 @@ const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
             <s.TextViewer>
               <s.Text>{modalObj.content}</s.Text>
             </s.TextViewer>
-            <ModalButton text="땡겨!!" className="check" onClick={onClose} />
+            <ModalButton text="땡겨!!" btnType={"pull"} onClick={onClose} />
           </s.ModalWrapper>
         </>
       )}
