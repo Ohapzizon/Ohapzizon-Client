@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/recoil": "^0.0.9",
     "@types/styled-components": "^5.1.16",
     "eslint-config-react-app": "^6.0.0",
     "next": "12.0.4",

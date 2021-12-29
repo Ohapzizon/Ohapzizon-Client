@@ -639,6 +639,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/recoil@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "@types/recoil@npm:0.0.9"
+  dependencies:
+    recoil: "*"
+  checksum: f4209a72dbbef74f3ba128678b0e9a24752273e5ae468c8ed51a6e5562561c214c250218224664410ca4d7f5f3764c1f657264bca0e09e63d52bfb53412e7cac
+  languageName: node
+  linkType: hard
+
 "@types/responselike@npm:*, @types/responselike@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/responselike@npm:1.0.0"
@@ -4079,6 +4088,7 @@ __metadata:
   dependencies:
     "@types/node": ^16.11.11
     "@types/react": ^17.0.37
+    "@types/recoil": ^0.0.9
     "@types/styled-components": ^5.1.16
     "@yarnpkg/pnpify": ^3.1.1-rc.8
     babel-plugin-styled-components: ^2.0.2
@@ -4633,7 +4643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"recoil@npm:^0.5.2":
+"recoil@npm:*, recoil@npm:^0.5.2":
   version: 0.5.2
   resolution: "recoil@npm:0.5.2"
   dependencies:
