@@ -14,7 +14,7 @@ export const Positioner = styled.header`
   background-color: ${Config.COLOR.WHITE};
 
   svg {
-    margin-left: 35px;
+    margin-left: 65px;
   }
 `;
 
