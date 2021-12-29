@@ -38,6 +38,9 @@ export const GlobalStyle: GlobalStyleComponent<
   input:focus::-webkit-input-placeholder{
     color:transparent;
   }
+  * {
+    font-family: "Noto Sans KR";
+  }
   button {
       cursor: pointer;
       outline: none;
