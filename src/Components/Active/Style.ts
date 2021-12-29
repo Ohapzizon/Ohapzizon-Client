@@ -5,7 +5,7 @@ export const Positioner = styled.div`
   grid-template-columns: repeat(4, 1fr);
   row-gap: 100px;
   justify-items: center;
-  margin: 70px auto;
+  margin: 100px auto;
 
   @media screen and (max-width: 1414px) {
     grid-template-columns: repeat(3, 1fr);
