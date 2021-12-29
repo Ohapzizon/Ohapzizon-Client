@@ -57,4 +57,5 @@ export const ContentContainer = styled.div`
   height: 100%;
   box-sizing: border-box;
   padding: 20px;
+  cursor: pointer;
 `;

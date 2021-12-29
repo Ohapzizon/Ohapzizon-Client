@@ -7,6 +7,7 @@
     "BLUE": "#0066FF",
     "WHITE": "#FFFFFF",
     "GRAY": "#BOABAB",
-    "LIGHTGRAY": "#DBDBDB"
+    "LIGHTGRAY": "#DBDBDB",
+    "SUPERLIGHTGRAY": "#555555"
   }
 }

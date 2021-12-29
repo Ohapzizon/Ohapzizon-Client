@@ -7,9 +7,15 @@ type modalbutton = {
 };
 
 const ModalButton: React.FC<modalbutton> = ({ text, className }) => {
+  function isClosed() {
+    alert("버튼 눌림");
+  }
+
   return (
     <>
-      <s.Button className={className}>{text}</s.Button>
+      <s.Button className={className} onClick={isClosed}>
+        {text}
+      </s.Button>
     </>
   );
 };
