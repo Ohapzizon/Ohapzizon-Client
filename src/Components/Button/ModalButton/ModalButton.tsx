@@ -4,19 +4,14 @@ import * as s from "./Style";
 type modalbutton = {
   text: string;
   className: string;
+  onClick?: (e) => void;
 };
 
-const ModalButton: React.FC<modalbutton> = ({ text, className }) => {
-  function isClosed() {
-    alert("버튼 눌림");
-  }
-
+const ModalButton: React.FC<modalbutton> = ({ text, className, onClick }) => {
   return (
-    <>
-      <s.Button className={className} onClick={isClosed}>
-        {text}
-      </s.Button>
-    </>
+    <s.Button className={className} onClick={onClick}>
+      {text}
+    </s.Button>
   );
 };
 
