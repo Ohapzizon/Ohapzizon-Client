@@ -9,6 +9,11 @@ export const Positioner = styled.div`
   background-color: ${Config.COLOR.WHITE};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
 `;
 
 export const Title = styled.h3`
