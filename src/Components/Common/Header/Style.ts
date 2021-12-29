@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Config from "../../../Constants/Config.json";
 
 export const Positioner = styled.header`
   width: 100%;
@@ -10,7 +11,7 @@ export const Positioner = styled.header`
   position: fixed;
   z-index: 1;
   top: 0;
-  background-color: #fff;
+  background-color: ${Config.COLOR.WHITE};
 
   svg {
     margin-left: 35px;

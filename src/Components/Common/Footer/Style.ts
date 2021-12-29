@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import Config from "../../../Constants/Config.json";
 
 export const Positioner = styled.footer`
   margin: 20px 3.2vw;
-  border-top: 3px solid #80b2ff;
+  border-top: 3px solid ${Config.COLOR.LIGHTBLUE};
   font-style: italic;
 
   p {
-    color: #80b2ff;
+    color: ${Config.COLOR.LIGHTBLUE};
     font-weight: bold;
     font-size: 16px;
   }
@@ -17,11 +18,11 @@ export const FooterTextWrapper = styled.div`
   margin-bottom: 30px;
 `;
 export const FooterText = styled.div`
-  color: #80b2ff;
+  color: ${Config.COLOR.LIGHTBLUE};
   font-weight: bold;
   font-size: 16px;
 
   span {
-    color: #0066ff;
+    color: ${Config.COLOR.BLUE};
   }
 `;
