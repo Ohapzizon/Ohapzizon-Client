@@ -1,4 +1,6 @@
 import React from "react";
+import { isOpen } from "../../../atoms";
+import { useRecoilState } from "recoil";
 import * as s from "./Style";
 import ModalButton from "../../Button/ModalButton/ModalButton";
 
@@ -7,6 +9,7 @@ type modal = {
   title: string;
   people: number;
   content: string;
+  visible: boolean;
 };
 
 interface ModalProps {
@@ -14,17 +17,28 @@ interface ModalProps {
 }
 
 const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
+  const [modalIsClose, setModalIsClose] = useRecoilState(isOpen);
+
+  function onClose() {
+    setModalIsClose(false);
+  }
+
   return (
-    <s.ModalWrapper>
-      <s.Title>{modalObj.title}</s.Title>
-      <s.People>{modalObj.people} 명</s.People>
-      <s.TextViewer>
-        <s.Text>{modalObj.content}</s.Text>
-      </s.TextViewer>
-      <s.ButtonWrapper>
-        <ModalButton text="땡겨!!" className="check" />
-      </s.ButtonWrapper>
-    </s.ModalWrapper>
+    <>
+      {!modalIsClose ? null : (
+        <>
+          <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
+          <s.ModalWrapper visible={modalObj.visible}>
+            <s.Title>{modalObj.title}</s.Title>
+            <s.People>{modalObj.people} 명</s.People>
+            <s.TextViewer>
+              <s.Text>{modalObj.content}</s.Text>
+            </s.TextViewer>
+            <ModalButton text="땡겨!!" btnType={"pull"} onClick={onClose} />
+          </s.ModalWrapper>
+        </>
+      )}
+    </>
   );
 };
 

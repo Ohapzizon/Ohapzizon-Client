@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-export const isOpened = atom<boolean>({
-  key: "isOpened",
+export const isOpen = atom<boolean>({
+  key: "isOpen",
   default: false,
 });

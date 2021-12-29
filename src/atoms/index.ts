@@ -1,1 +1,1 @@
-export { isOpened } from "./AtomContainer";
+export { isOpen } from "./AtomContainer";
