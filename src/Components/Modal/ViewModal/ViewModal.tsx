@@ -1,5 +1,5 @@
 import React from "react";
-import { isOpened } from "../../../atoms";
+import { isOpen } from "../../../atoms";
 import { useRecoilState } from "recoil";
 import * as s from "./Style";
 import ModalButton from "../../Button/ModalButton/ModalButton";
@@ -17,15 +17,15 @@ interface ModalProps {
 }
 
 const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
-  const [closeModal, setCloseModal] = useRecoilState(isOpened);
+  const [modalIsClose, setModalIsClose] = useRecoilState(isOpen);
 
   function onClose() {
-    setCloseModal(false);
+    setModalIsClose(false);
   }
 
   return (
     <>
-      {!closeModal ? null : (
+      {!modalIsClose ? null : (
         <>
           <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
           <s.ModalWrapper visible={modalObj.visible}>

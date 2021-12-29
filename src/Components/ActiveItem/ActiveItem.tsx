@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRecoilState } from "recoil";
-import { isOpened } from "../../atoms";
+import { isOpen } from "../../atoms";
 import ViewModal from "../Modal/ViewModal/ViewModal";
 import * as s from "./Style";
 
@@ -15,16 +15,16 @@ interface ActiveProps {
 }
 
 const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
-  const [modal, setModal] = useRecoilState(isOpened);
+  const [modalIsOpen, setModalIsOpen] = useRecoilState(isOpen);
 
-  function onClick() {
-    setModal(true);
+  function openModal() {
+    setModalIsOpen(true);
   }
 
   return (
     <>
       <s.Positioner>
-        <s.ContentContainer onClick={onClick}>
+        <s.ContentContainer onClick={openModal}>
           <s.TitleContainer>
             <s.Title>{activeObj.title}</s.Title>
             <span>☀️</span>
@@ -34,7 +34,7 @@ const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
         </s.ContentContainer>
         <s.PullButton>땡겨!!!!!</s.PullButton>
       </s.Positioner>
-      {modal && (
+      {modalIsOpen && (
         <ViewModal
           modalObj={{
             id: 1,
@@ -42,7 +42,7 @@ const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
             people: 18,
             content:
               "저기 운동장에서 축구 한판 땡길분들 밥 얼른 먹고 축구화나 챙겨서 나오세요~",
-            visible: modal,
+            visible: modalIsOpen,
           }}
         />
       )}
