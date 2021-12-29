@@ -17,14 +17,14 @@ interface ActiveProps {
 const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
   const [modal, setModal] = useRecoilState(isOpened);
 
-  function onClicked() {
+  function onClick() {
     setModal(true);
   }
 
   return (
     <>
       <s.Positioner>
-        <s.ContentContainer onClick={onClicked}>
+        <s.ContentContainer onClick={onClick}>
           <s.TitleContainer>
             <s.Title>{activeObj.title}</s.Title>
             <span>☀️</span>

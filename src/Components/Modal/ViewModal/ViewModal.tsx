@@ -19,7 +19,7 @@ interface ModalProps {
 const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
   const [closeModal, setCloseModal] = useRecoilState(isOpened);
 
-  function onClosed() {
+  function onClose() {
     setCloseModal(false);
   }
 
@@ -27,14 +27,14 @@ const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
     <>
       {!closeModal ? null : (
         <>
-          <s.ModalOverlay visible={modalObj.visible} onClick={onClosed} />
+          <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
           <s.ModalWrapper visible={modalObj.visible}>
             <s.Title>{modalObj.title}</s.Title>
             <s.People>{modalObj.people} 명</s.People>
             <s.TextViewer>
               <s.Text>{modalObj.content}</s.Text>
             </s.TextViewer>
-            <ModalButton text="땡겨!!" className="check" onClick={onClosed} />
+            <ModalButton text="땡겨!!" className="check" onClick={onClose} />
           </s.ModalWrapper>
         </>
       )}
