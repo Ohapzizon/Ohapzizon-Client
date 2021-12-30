@@ -3,6 +3,7 @@ import Config from "../../../Constants/Config.json";
 
 type StyleProps = {
   visible?: boolean;
+  mode?: string;
 };
 
 export const ModalOverlay = styled.div<StyleProps>`
@@ -14,7 +15,7 @@ export const ModalOverlay = styled.div<StyleProps>`
   bottom: 0;
   right: 0;
   background-color: ${Config.COLOR.SUPERLIGHTGRAY};
-  opacity: 0.1;
+  opacity: 0.4;
 `;
 
 export const ModalWrapper = styled.div<StyleProps>`
@@ -29,7 +30,10 @@ export const ModalWrapper = styled.div<StyleProps>`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: ${Config.COLOR.WHITE};
+  background-color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.bgColor
+      : Config.darkTheme.bgColor};
   border-radius: 10px;
 `;
 
