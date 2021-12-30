@@ -8,7 +8,8 @@ import LoginModal from "../../Modal/LoginModal/LoginModal";
 
 const Header = () => {
   const themeMode = useRecoilValue(theme);
-  const [loginModalIsOpen, setLoginModalIsOpen] = useRecoilState(isLoginModalOpen);
+  const [loginModalIsOpen, setLoginModalIsOpen] =
+    useRecoilState(isLoginModalOpen);
 
   function openLoginModal() {
     setLoginModalIsOpen(true);
@@ -18,16 +19,16 @@ const Header = () => {
     <>
       <s.Positioner mode={themeMode}>
         {themeMode === "light" ? <LogoBlack /> : <LogoWhite />}
-        <s.Nav>로그인</s.Nav>
+        <s.Nav onClick={openLoginModal}>로그인</s.Nav>
       </s.Positioner>
       {loginModalIsOpen && (
-          <LoginModal
-            modalObj={{
-              visible: loginModalIsOpen,
-            }}
-          />
-        )}
-     </>
+        <LoginModal
+          modalObj={{
+            visible: loginModalIsOpen,
+          }}
+        />
+      )}
+    </>
   );
 };
 
