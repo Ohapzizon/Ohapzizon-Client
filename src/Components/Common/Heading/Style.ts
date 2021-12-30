@@ -7,16 +7,13 @@ type StyleProps = {
 
 export const Positioner = styled.div<StyleProps>`
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 200px;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   padding: 160px 5% 70px;
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
+  color: ${Config.COLOR.BLACK};
 `;
 
 export const HeadingTitle = styled.h1`
@@ -32,7 +29,7 @@ export const HeadingText = styled.div`
 `;
 
 export const RecruitBtn = styled.button`
-  width: 140px;
+  width: 150px;
   height: 25%;
   font-size: 18px;
   background-color: ${Config.COLOR.BLUE};

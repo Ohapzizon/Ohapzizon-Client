@@ -1,10 +1,4 @@
-import styled, {
-  createGlobalStyle,
-  GlobalStyleComponent,
-} from "styled-components";
-
-import Config from "../Constants/Config.json";
-import { CheckTime } from "../Util/CheckTime";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -27,14 +21,6 @@ export const GlobalStyle = createGlobalStyle`
   body{
     width: 100%;
     height: 100%;
-    background-color: ${() =>
-      CheckTime() === "light"
-        ? Config.lightTheme.bgColor
-        : Config.darkTheme.bgColor};
-    color: ${() =>
-      CheckTime() === "light"
-        ? Config.lightTheme.textColor
-        : Config.darkTheme.textColor};
   }
   input:focus,
   select:focus,

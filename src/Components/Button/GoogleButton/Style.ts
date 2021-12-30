@@ -14,14 +14,8 @@ export const Button = styled.button<StyleProps>`
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: 400;
-  background-color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.bgColor
-      : Config.darkTheme.bgColor};
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
+  background-color: ${Config.COLOR.WHITE};
+  color: ${Config.COLOR.BLACK};
   border: 1px solid #c2c2c2;
   margin-top: 75px;
 `;

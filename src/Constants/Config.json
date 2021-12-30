@@ -9,15 +9,5 @@
     "GRAY": "#BOABAB",
     "LIGHTGRAY": "#DBDBDB",
     "SUPERLIGHTGRAY": "#555555"
-  },
-  "lightTheme": {
-    "bgColor": "#FFFFFF",
-    "textColor": "#333333",
-    "activeColor": "#FFFFFF"
-  },
-  "darkTheme": {
-    "bgColor": "#292929",
-    "textColor": "#FFFFFF",
-    "activeColor": "#1B1D1F"
   }
 }
