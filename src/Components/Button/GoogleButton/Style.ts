@@ -6,8 +6,8 @@ type StyleProps = {
 };
 
 export const Button = styled.button<StyleProps>`
-  width: 120%;
-  height: 30%;
+  width: 37%;
+  height: 37%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -18,4 +18,9 @@ export const Button = styled.button<StyleProps>`
   color: ${Config.COLOR.BLACK};
   border: 1px solid #c2c2c2;
   margin-top: 75px;
+`;
+
+export const Text = styled.p`
+  font-size: 20px;
+  margin-top: 2%;
 `;

@@ -55,7 +55,7 @@ export const DropdownSelect = styled.select`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -0.43vh;
+  margin-top: -0.1vh;
 
   margin-left: 0.5%;
   width: 10%;

@@ -60,6 +60,11 @@ export const PullButton = styled.button`
   font-family: "Noto Sans KR";
   font-weight: bold;
   font-size: 25px;
+
+  &:hover {
+    background-color: ${Config.COLOR.DARKBLUE};
+    transition: 0.3s;
+  }
 `;
 
 export const ContentContainer = styled.div`
