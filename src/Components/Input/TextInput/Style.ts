@@ -24,6 +24,10 @@ export const Input = styled.textarea<StyleProps>`
     props.mode === "light"
       ? Config.lightTheme.bgColor
       : Config.darkTheme.bgColor};
+  color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.textColor
+      : Config.darkTheme.textColor};
 
   ::placeholder {
     font-size: 16px;
