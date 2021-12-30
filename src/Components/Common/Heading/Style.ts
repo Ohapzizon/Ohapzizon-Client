@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import Config from "../../../Constants/Config.json";
 
-export const Positioner = styled.div`
+type StyleProps = {
+  mode?: string;
+};
+
+export const Positioner = styled.div<StyleProps>`
   display: flex;
   width: 100%;
   height: 200px;
@@ -9,6 +13,10 @@ export const Positioner = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 160px 5% 70px;
+  color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.textColor
+      : Config.darkTheme.textColor};
 `;
 
 export const HeadingTitle = styled.h1`

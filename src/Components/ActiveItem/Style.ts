@@ -1,14 +1,25 @@
 import styled from "styled-components";
 import Config from "../../Constants/Config.json";
 
-export const Positioner = styled.div`
+type StyleProps = {
+  mode?: string;
+};
+
+export const Positioner = styled.div<StyleProps>`
   width: 350px;
   height: 350px;
   display: flex;
   flex-direction: column;
-  background-color: ${Config.COLOR.WHITE};
+  background-color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.activeColor
+      : Config.darkTheme.activeColor};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.textColor
+      : Config.darkTheme.textColor};
 
   &:hover {
     transform: scale(1.1);

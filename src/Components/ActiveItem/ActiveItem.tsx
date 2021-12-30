@@ -1,8 +1,9 @@
-import React from "react";
-import { useRecoilState } from "recoil";
+import React, { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { isOpen } from "../../atoms";
 import ViewModal from "../Modal/ViewModal/ViewModal";
 import * as s from "./Style";
+import { theme } from "../../atoms";
 
 type activeItem = {
   title: string;
@@ -16,6 +17,7 @@ interface ActiveProps {
 
 const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
   const [modalIsOpen, setModalIsOpen] = useRecoilState(isOpen);
+  const themeMode = useRecoilValue(theme);
 
   function openModal() {
     setModalIsOpen(true);
@@ -23,7 +25,7 @@ const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
 
   return (
     <>
-      <s.Positioner>
+      <s.Positioner mode={themeMode}>
         <s.ContentContainer onClick={openModal}>
           <s.TitleContainer>
             <s.Title>{activeObj.title}</s.Title>
