@@ -30,7 +30,6 @@ const Heading = () => {
 
   function openWriteModal() {
     setWriteModalIsOpen(true);
-    console.log("click");
   }
 
   return (

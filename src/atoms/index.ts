@@ -1,1 +1,1 @@
-export { isOpen, isWriteModalOpen } from "./AtomContainer";
+export { isOpen, isWriteModalOpen, isLoginModalOpen } from "./AtomContainer";
