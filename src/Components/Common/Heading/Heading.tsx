@@ -1,11 +1,9 @@
 import React from "react";
 import * as s from "./Style";
 import * as i from "../../../Assets";
-
-const checkTime = () => {
-  const hours = new Date().getHours();
-  return hours > 0 && hours < 13 ? "점심" : "저녁";
-};
+import { CheckTime } from "../../../Util/CheckTime";
+import { theme } from "../../../atoms";
+import { useRecoilValue } from "recoil";
 
 const randomActivity = () => {
   const Activity: string[] = [
@@ -22,9 +20,12 @@ const randomActivity = () => {
 };
 
 const Heading = () => {
+  const themeMode = useRecoilValue(theme);
   return (
-    <s.Positioner>
-      <s.HeadingTitle>{checkTime()} 먹고 뭐하지</s.HeadingTitle>
+    <s.Positioner mode={themeMode}>
+      <s.HeadingTitle>
+        {CheckTime() === "light" ? "점심" : "저녁"} 먹고 뭐하지
+      </s.HeadingTitle>
       <s.HeadingText>
         오늘은 <b>{randomActivity()}</b> 땡기는거 어때요?
       </s.HeadingText>
