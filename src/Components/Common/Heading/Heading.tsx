@@ -39,7 +39,7 @@ const Heading = () => {
         <s.HeadingText>
           오늘은 <b>{randomActivity()}</b> 땡기는거 어때요?
         </s.HeadingText>
-        <s.RecruitBtn>
+        <s.RecruitBtn onClick={openWriteModal} >
           <i.Recruit />
           모집하기
         </s.RecruitBtn>
