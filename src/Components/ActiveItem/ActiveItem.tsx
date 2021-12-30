@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useRecoilState } from "recoil";
 import { isOpen } from "../../atoms";
 import ViewModal from "../Modal/ViewModal/ViewModal";

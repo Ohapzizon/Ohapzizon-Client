@@ -2,13 +2,7 @@ import * as React from "react";
 
 function Google(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      width="1.7em"
-      height="1.7em"
-      viewBox="0 0 30 30"
-      fill="none"
-      {...props}
-    >
+    <svg width="35px" height="35px" viewBox="0 0 30 30" fill="none" {...props}>
       <path fill="url(#prefix__pattern1)" d="M0 0h30v30H0z" />
       <defs>
         <pattern
