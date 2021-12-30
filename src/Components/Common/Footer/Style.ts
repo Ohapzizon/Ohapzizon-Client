@@ -4,7 +4,6 @@ import Config from "../../../Constants/Config.json";
 export const Positioner = styled.footer`
   margin: 20px 5%;
   border-top: 3px solid ${Config.COLOR.LIGHTBLUE};
-  font-style: italic;
 
   p {
     color: ${Config.COLOR.LIGHTBLUE};
