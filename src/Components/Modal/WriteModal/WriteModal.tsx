@@ -1,7 +1,6 @@
 import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { isWriteModalOpen } from "../../../atoms/index";
-import { theme } from "../../../atoms";
 import Input from "../../Input/Modal/Input";
 import * as s from "./Style";
 import TextInput from "../../Input/TextInput/TextInput";
@@ -39,7 +38,6 @@ interface ModalProps {
 }
 
 const WriteModal: React.FC<ModalProps> = ({ modalObj }) => {
-  const themeMode = useRecoilValue(theme);
   const [writemodalIsClose, setWriteModalIsClose] =
     useRecoilState(isWriteModalOpen);
 
@@ -51,12 +49,8 @@ const WriteModal: React.FC<ModalProps> = ({ modalObj }) => {
     <>
       {!writemodalIsClose ? null : (
         <>
-          <s.ModalOverlay
-            visible={modalObj.visible}
-            onClick={onClose}
-            mode={themeMode}
-          />
-          <s.ModalWrapper visible={modalObj.visible} mode={themeMode}>
+          <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
+          <s.ModalWrapper visible={modalObj.visible}>
             <Input type="text" />
             <s.Dropdown>
               <p>인원수</p>

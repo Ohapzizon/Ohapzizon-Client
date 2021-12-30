@@ -10,16 +10,10 @@ export const Positioner = styled.div<StyleProps>`
   height: 350px;
   display: flex;
   flex-direction: column;
-  background-color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.activeColor
-      : Config.darkTheme.activeColor};
+  background-color: ${Config.COLOR.WHITE};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
+  color: ${Config.COLOR.BLACK};
 
   &:hover {
     transform: scale(1.1);

@@ -30,10 +30,7 @@ export const ModalWrapper = styled.div<StyleProps>`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.bgColor
-      : Config.darkTheme.bgColor};
+  background-color: ${Config.COLOR.WHITE};
   border-radius: 10px;
 `;
 
