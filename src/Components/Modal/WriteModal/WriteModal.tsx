@@ -1,4 +1,6 @@
 import React from "react";
+import { useRecoilState } from "recoil";
+import { isWriteModalOpen } from "../../../atoms/index";
 import Input from "../../Input/Modal/Input";
 import * as s from "./Style";
 import TextInput from "../../Input/TextInput/TextInput";
@@ -27,24 +29,46 @@ const people = [
   "20명",
 ];
 
-const WriteModal = () => {
+type modal = {
+  visible: boolean;
+};
+
+interface ModalProps {
+  modalObj: modal;
+}
+
+const WriteModal: React.FC<ModalProps> = ({ modalObj }) => {
+  const [writemodalIsClose, setWriteModalIsClose] =
+    useRecoilState(isWriteModalOpen);
+
+  function onClose() {
+    setWriteModalIsClose(false);
+  }
+
   return (
-    <s.ModalWrapper>
-      <Input type="text" />
-      <s.Dropdown>
-        <p>인원수</p>
-        <s.DropdownSelect>
-          {people.map((people, idx) => (
-            <s.DropdownOption key={idx}>{people}</s.DropdownOption>
-          ))}
-        </s.DropdownSelect>
-      </s.Dropdown>
-      <TextInput />
-      <s.ButtonWrapper>
-        <ModalButton text="취소" btnType={"cancel"} />
-        <ModalButton text="땡겨!!" btnType={"pull"} />
-      </s.ButtonWrapper>
-    </s.ModalWrapper>
+    <>
+      {!writemodalIsClose ? null : (
+        <>
+          <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
+          <s.ModalWrapper visible={modalObj.visible}>
+            <Input type="text" />
+            <s.Dropdown>
+              <p>인원수</p>
+              <s.DropdownSelect>
+                {people.map((people, idx) => (
+                  <s.DropdownOption key={idx}>{people}</s.DropdownOption>
+                ))}
+              </s.DropdownSelect>
+            </s.Dropdown>
+            <TextInput />
+            <s.ButtonWrapper>
+              <ModalButton text="취소" btnType={"cancel"} onClick={onClose} />
+              <ModalButton text="땡겨!!" btnType={"pull"} onClick={onClose} />
+            </s.ButtonWrapper>
+          </s.ModalWrapper>
+        </>
+      )}
+    </>
   );
 };
 

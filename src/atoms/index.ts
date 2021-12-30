@@ -1,2 +1,1 @@
-export { isOpen } from "./AtomContainer";
-export { theme } from "./AtomContainer";
+export { isOpen, isWriteModalOpen, isLoginModalOpen, theme } from "./AtomContainer";

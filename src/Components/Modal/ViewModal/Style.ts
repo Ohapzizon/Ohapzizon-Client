@@ -27,7 +27,7 @@ export const ModalWrapper = styled.div<StyleProps>`
   top: 10%;
   left: 28%;
   box-sizing: border-box;
-  padding: 3rem;
+  padding: 5rem;
   background-color: ${Config.COLOR.WHITE};
   border-radius: 10px;
 
@@ -38,6 +38,8 @@ export const ModalWrapper = styled.div<StyleProps>`
 `;
 
 export const Title = styled.p`
+  width: 100%;
+  height: 7%;
   font-size: 36px;
   font-weight: bold;
   font-style: italic;
@@ -45,6 +47,8 @@ export const Title = styled.p`
 `;
 
 export const People = styled.p`
+  width: 100%;
+  height: 3%;
   margin-top: 0.5rem;
   font-size: 16px;
   font-weight: bold;
@@ -54,7 +58,7 @@ export const People = styled.p`
 
 export const TextViewer = styled.div`
   width: 100%;
-  height: 38rem;
+  height: 85%;
   margin-top: 1rem;
   border-radius: 10px;
   border: 1.5px solid #dbdbdb;
@@ -67,4 +71,9 @@ export const Text = styled.p`
   font-weight: bold;
   font-style: italic;
   overflow: auto;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  height: 5%;
 `;
