@@ -18,4 +18,12 @@ export const Button = styled.button<StyleProps>`
     props.btnType === "cancel"
       ? Config.COLOR.SUPERLIGHTGRAY
       : Config.COLOR.BLUE};
+
+  &:hover {
+    background-color: ${(props) =>
+      props.btnType === "cancel"
+        ? Config.COLOR.SUPERLIGHTGRAY
+        : Config.COLOR.DARKBLUE};
+    transition: 0.5s;
+  }
 `;
