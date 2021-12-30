@@ -1,6 +1,7 @@
 import React from "react";
 import { isOpen } from "../../../atoms";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { theme } from "../../../atoms";
 import * as s from "./Style";
 import ModalButton from "../../Button/ModalButton/ModalButton";
 
@@ -17,6 +18,7 @@ interface ModalProps {
 }
 
 const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
+  const themeMode = useRecoilValue(theme);
   const [modalIsClose, setModalIsClose] = useRecoilState(isOpen);
 
   function onClose() {
@@ -27,8 +29,12 @@ const ViewModal: React.FC<ModalProps> = ({ modalObj }) => {
     <>
       {!modalIsClose ? null : (
         <>
-          <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
-          <s.ModalWrapper visible={modalObj.visible}>
+          <s.ModalOverlay
+            visible={modalObj.visible}
+            onClick={onClose}
+            mode={themeMode}
+          />
+          <s.ModalWrapper visible={modalObj.visible} mode={themeMode}>
             <s.Title>{modalObj.title}</s.Title>
             <s.People>{modalObj.people} 명</s.People>
             <s.TextViewer>

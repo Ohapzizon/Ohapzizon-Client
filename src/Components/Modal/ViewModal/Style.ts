@@ -3,6 +3,7 @@ import Config from "../../../Constants/Config.json";
 
 type StyleProps = {
   visible?: boolean;
+  mode?: string;
 };
 
 export const ModalOverlay = styled.div<StyleProps>`
@@ -28,7 +29,10 @@ export const ModalWrapper = styled.div<StyleProps>`
   left: 28%;
   box-sizing: border-box;
   padding: 5rem;
-  background-color: ${Config.COLOR.WHITE};
+  background-color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.bgColor
+      : Config.darkTheme.bgColor};
   border-radius: 10px;
 
   button {
@@ -37,21 +41,27 @@ export const ModalWrapper = styled.div<StyleProps>`
   }
 `;
 
-export const Title = styled.p`
+export const Title = styled.p<StyleProps>`
   width: 100%;
   height: 7%;
   font-size: 36px;
   font-weight: bold;
-  color: ${Config.COLOR.BLACK};
+  color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.textColor
+      : Config.darkTheme.textColor};
 `;
 
-export const People = styled.p`
+export const People = styled.p<StyleProps>`
   width: 100%;
   height: 3%;
   margin-top: 0.5rem;
   font-size: 16px;
   font-weight: bold;
-  color: ${Config.COLOR.BLACK};
+  color: ${(props) =>
+    props.mode === "light"
+      ? Config.lightTheme.textColor
+      : Config.darkTheme.textColor};
 `;
 
 export const TextViewer = styled.div`
