@@ -42,7 +42,6 @@ export const Title = styled.p`
   height: 7%;
   font-size: 36px;
   font-weight: bold;
-  font-style: italic;
   color: ${Config.COLOR.BLACK};
 `;
 
@@ -52,7 +51,6 @@ export const People = styled.p`
   margin-top: 0.5rem;
   font-size: 16px;
   font-weight: bold;
-  font-style: italic;
   color: ${Config.COLOR.BLACK};
 `;
 
@@ -69,7 +67,6 @@ export const Text = styled.p`
   padding-left: 0.5rem;
   font-size: 16px;
   font-weight: bold;
-  font-style: italic;
   overflow: auto;
 `;
 

@@ -13,7 +13,6 @@ export const Button = styled.button<StyleProps>`
   border: none;
   font-size: 18px;
   font-weight: bold;
-  font-style: italic;
   color: ${Config.COLOR.WHITE};
   background-color: ${(props) =>
     props.btnType === "cancel" ? Config.COLOR.GRAY : Config.COLOR.BLUE};
