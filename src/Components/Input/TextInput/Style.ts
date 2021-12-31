@@ -20,8 +20,8 @@ export const Input = styled.textarea<StyleProps>`
   font-weight: bold;
   color: ${Config.COLOR.BLACK};
   resize: none;
-  background-color: ${Config.COLOR.WHITE};
-  color: ${Config.COLOR.BLACK};
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
 
   ::placeholder {
     font-size: 16px;

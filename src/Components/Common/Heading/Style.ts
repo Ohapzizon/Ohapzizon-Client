@@ -13,7 +13,7 @@ export const Positioner = styled.div<StyleProps>`
   justify-content: center;
   flex-direction: column;
   padding: 160px 5% 70px;
-  color: ${Config.COLOR.BLACK};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const HeadingTitle = styled.h1`

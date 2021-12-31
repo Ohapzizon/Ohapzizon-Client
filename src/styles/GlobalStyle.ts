@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     width: 100%;
     height: 100%;
+    background-color: ${({ theme }) => theme.background};
   }
   input:focus,
   select:focus,

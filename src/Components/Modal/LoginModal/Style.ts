@@ -29,7 +29,7 @@ export const ModalWrapper = styled.div<StyleProps>`
   left: 37%;
   box-sizing: border-box;
   padding: 5rem;
-  background-color: ${Config.COLOR.WHITE};
+  background-color: ${({ theme }) => theme.background};
   border-radius: 10px;
 `;
 
