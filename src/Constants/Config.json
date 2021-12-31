@@ -1,4 +1,7 @@
 {
+  "KEY": {
+    "THEME": "theme"
+  },
   "COLOR": {
     "SEMIBLACK": "#292929",
     "BLACK": "#333333",
