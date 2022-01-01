@@ -51,7 +51,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:17.0.2"],
             ["recoil", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:0.5.2"],
             ["styled-components", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.3.3"],
-            ["styled-reset", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:4.3.4"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -4890,7 +4889,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:17.0.2"],
             ["recoil", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:0.5.2"],
             ["styled-components", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.3.3"],
-            ["styled-reset", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:4.3.4"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -6248,28 +6246,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/babel__core",
             "@types/react",
             "react"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["styled-reset", [
-        ["npm:4.3.4", {
-          "packageLocation": "./.yarn/cache/styled-reset-npm-4.3.4-733727547e-2a652f1d02.zip/node_modules/styled-reset/",
-          "packageDependencies": [
-            ["styled-reset", "npm:4.3.4"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:4.3.4", {
-          "packageLocation": "./.yarn/__virtual__/styled-reset-virtual-f3c588cc3e/0/cache/styled-reset-npm-4.3.4-733727547e-2a652f1d02.zip/node_modules/styled-reset/",
-          "packageDependencies": [
-            ["styled-reset", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:4.3.4"],
-            ["@types/styled-components", "npm:5.1.16"],
-            ["styled-components", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.3.3"]
-          ],
-          "packagePeers": [
-            "@types/styled-components",
-            "styled-components"
           ],
           "linkType": "HARD",
         }]
