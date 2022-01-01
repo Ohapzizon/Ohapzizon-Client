@@ -7,5 +7,6 @@ declare module "styled-components" {
     active: string;
     themeButton: string;
     headerShadow: string;
+    googleButtonShadow: string;
   }
 }
