@@ -6,8 +6,8 @@ type StyleProps = {
 };
 
 export const Button = styled.button<StyleProps>`
-  width: 120%;
-  height: 30%;
+  width: 37%;
+  height: 37%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
