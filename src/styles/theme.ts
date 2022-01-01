@@ -7,6 +7,7 @@ export const LightTheme: DefaultTheme = {
   active: "#FFFFFF",
   themeButton: "#E9C300",
   headerShadow: "rgba(0, 0, 0, 0.1)",
+  googleButtonShadow: "rgba(0, 0, 0, 0.4)",
 };
 
 export const DarkTheme: DefaultTheme = {
@@ -15,4 +16,5 @@ export const DarkTheme: DefaultTheme = {
   active: "#1B1D1F",
   themeButton: "#955CFF",
   headerShadow: "rgba(255, 255, 255, 0.1)",
+  googleButtonShadow: "rgba(255, 255, 255, 0.4)",
 };

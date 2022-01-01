@@ -14,13 +14,15 @@ export const Button = styled.button<StyleProps>`
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: 400;
-  background-color: ${Config.COLOR.WHITE};
+  background-color: ${({ theme }) => theme.active};
   color: ${Config.COLOR.BLACK};
-  border: 1px solid #c2c2c2;
+  border: 0;
+  box-shadow: 0px 0px 4px ${({ theme }) => theme.googleButtonShadow};
   margin-top: 75px;
 `;
 
 export const Text = styled.p`
   font-size: 20px;
+  color: ${({ theme }) => theme.text};
   margin-top: 2%;
 `;
