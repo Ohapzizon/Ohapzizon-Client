@@ -1,14 +1,13 @@
 // pages/_app.tsx
 import { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
-import { GlobalStyle } from "../styles/GlobalStyle";
+import Provider from "../Components/Provider/Provider";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
       <RecoilRoot>
-        <Component {...pageProps} />
+        <Provider Component={Component} pageProps={pageProps} />
       </RecoilRoot>
     </>
   );

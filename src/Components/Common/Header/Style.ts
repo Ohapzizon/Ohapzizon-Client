@@ -11,12 +11,12 @@ export const Positioner = styled.header<StyleProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px ${({ theme }) => theme.headerShadow};
   position: fixed;
   z-index: 1;
   top: 0;
-  background-color: ${Config.COLOR.WHITE};
-  color: ${Config.COLOR.BLACK};
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
 
   svg {
     margin-left: 5%;

@@ -1,1 +1,6 @@
-export { isOpen, isWriteModalOpen, isLoginModalOpen } from "./AtomContainer";
+export {
+  isOpen,
+  isWriteModalOpen,
+  isLoginModalOpen,
+  themeMode,
+} from "./AtomContainer";
