@@ -11,6 +11,9 @@ export const MemberController = {
 };
 
 export const PostController = {
+  pull: (id: string) => {
+    return `/organization/participate/${id}`;
+  },
   recruitment: () => {
     return "/post/recruitment";
   },
