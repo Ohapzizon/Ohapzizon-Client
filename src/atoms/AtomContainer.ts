@@ -21,3 +21,13 @@ export const themeMode = atom<ThemeEnums>({
   key: "themeMode",
   default: getTheme(),
 });
+
+export const isModifyModalOpen = atom<boolean>({
+  key: "isModifyModalOpen",
+  default: false,
+});
+
+export const isModify = atom<boolean>({
+  key: "isModify",
+  default: false,
+});
