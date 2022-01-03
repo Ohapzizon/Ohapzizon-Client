@@ -2,8 +2,8 @@ import React from "react";
 import * as s from "./Style";
 
 type input = {
-  value: string;
-  onChange: (e: any) => void;
+  value?: string;
+  onChange?: (e: any) => void;
 };
 
 const TextInput: React.FC<input> = ({ value, onChange }) => {
