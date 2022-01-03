@@ -15,5 +15,6 @@ export const Positioner = styled.div`
   }
   @media screen and (max-width: 710px) {
     grid-template-columns: repeat(1, 350px);
+    justify-content: center;
   }
 `;
