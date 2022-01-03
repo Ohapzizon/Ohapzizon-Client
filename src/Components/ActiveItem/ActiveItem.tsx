@@ -3,9 +3,13 @@ import { useRecoilState } from "recoil";
 import { isOpen } from "../../atoms";
 import ViewModal from "../Modal/ViewModal/ViewModal";
 import * as s from "./Style";
+import PullButton from "../Button/PullButton/PullButton";
+import ActiveButton from "../Button/ActiveButton/ActiveButton";
 
 type activeItem = {
+  id: number;
   title: string;
+  name: string;
   people: number;
   content: string;
 };
@@ -29,10 +33,13 @@ const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
             <s.Title>{activeObj.title}</s.Title>
             <span>☀️</span>
           </s.TitleContainer>
-          <s.Personnel>👤 {activeObj.people}명</s.Personnel>
+          <s.InfoContainer>
+            <s.Personnel>👥 {activeObj.people}명</s.Personnel>
+            <span>{activeObj.name}</span>
+          </s.InfoContainer>
           <s.content>{activeObj.content}</s.content>
         </s.ContentContainer>
-        <s.PullButton>땡겨!!!!!</s.PullButton>
+        <ActiveButton />
       </s.Positioner>
       {modalIsOpen && (
         <ViewModal

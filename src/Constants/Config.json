@@ -12,7 +12,8 @@
     "WHITE": "#FFFFFF",
     "GRAY": "#BOABAB",
     "LIGHTGRAY": "#DBDBDB",
-    "SUPERLIGHTGRAY": "#555555"
+    "SUPERLIGHTGRAY": "#555555",
+    "RED": "#E9423F"
   },
   "BASE_HEADER": {
     "Access-Control-Allow-Origin": "*",
