@@ -2,10 +2,6 @@ import axios, { AxiosRequestConfig } from "axios";
 import { BASE_URL, BASE_HEADER } from "../Constants/Config.json";
 import Storage from "./Storage";
 
-export interface HasToken {
-  HasToken?: boolean;
-}
-
 const RequestApi = async (p: AxiosRequestConfig) => {
   try {
     const header = Object.assign({
