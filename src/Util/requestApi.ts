@@ -9,7 +9,6 @@ const RequestApi = async (p: AxiosRequestConfig) => {
       ...BASE_HEADER,
       ...{
         Authorization: Storage.get("accessToken") ?? "",
-        RefreshToken: Storage.get("refreshToken") ?? "",
       },
     });
     return axios({
