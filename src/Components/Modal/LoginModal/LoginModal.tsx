@@ -6,6 +6,7 @@ import * as I from "../../../Assets/index";
 import Googlebutton from "../../Button/GoogleButton/Googlebutton";
 import useTheme from "../../../hooks/useTheme";
 import { ThemeEnums } from "../../../enum/ThemeEnums";
+import member from "../../../Api/member";
 
 type modal = {
   visible: boolean;
@@ -14,6 +15,13 @@ type modal = {
 interface ModalProps {
   modalObj: modal;
 }
+
+const onGoogleLogin = async () => {
+  try {
+    const res = await member.googleAuth();
+    console.log(res);
+  } catch (e) {}
+};
 
 const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
   const [loginModalIsClose, setLoginModalIsClose] =
@@ -36,7 +44,7 @@ const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
               ) : (
                 <I.LogoWhite />
               )}
-              <Googlebutton />
+              <Googlebutton onClick={onGoogleLogin} />
             </s.LoginWrapper>
           </s.ModalWrapper>
         </>
