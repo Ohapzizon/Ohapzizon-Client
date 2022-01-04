@@ -10,16 +10,10 @@ export const Positioner = styled.div<StyleProps>`
   height: 350px;
   display: flex;
   flex-direction: column;
-  background-color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.activeColor
-      : Config.darkTheme.activeColor};
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: ${({ theme }) => theme.active};
+  box-shadow: 0px 0px 10px ${({ theme }) => theme.headerShadow};
   border-radius: 5px;
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
+  color: ${({ theme }) => theme.text};
 
   &:hover {
     transform: scale(1.1);
@@ -30,6 +24,7 @@ export const Positioner = styled.div<StyleProps>`
 export const Title = styled.h3`
   font-size: 24px;
   font-family: "Noto Sans KR";
+  margin-bottom: 5px;
 `;
 
 export const content = styled.span`
@@ -39,10 +34,13 @@ export const content = styled.span`
 `;
 
 export const TitleContainer = styled.div`
-  height: 9%;
+  height: 13%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  span {
+    font-size: 26px;
+  }
 `;
 
 export const Personnel = styled.div`
@@ -50,22 +48,9 @@ export const Personnel = styled.div`
 
   height: 7%;
   border-radius: 10px;
-  margin-bottom: 15px;
   font-size: 14px;
   font-weight: 600;
   font-family: "Noto Sans KR";
-`;
-
-export const PullButton = styled.button`
-  width: 100%;
-  height: 20%;
-  border: none;
-  background-color: ${Config.COLOR.BLUE};
-  border-radius: 0px 0px 5px 5px;
-  color: ${Config.COLOR.WHITE};
-  font-family: "Noto Sans KR";
-  font-weight: bold;
-  font-size: 25px;
 `;
 
 export const ContentContainer = styled.div`
@@ -74,4 +59,12 @@ export const ContentContainer = styled.div`
   box-sizing: border-box;
   padding: 20px;
   cursor: pointer;
+`;
+
+export const InfoContainer = styled.div`
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 `;

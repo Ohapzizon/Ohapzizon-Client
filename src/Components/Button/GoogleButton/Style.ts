@@ -6,22 +6,23 @@ type StyleProps = {
 };
 
 export const Button = styled.button<StyleProps>`
-  width: 120%;
-  height: 30%;
+  width: 37%;
+  height: 37%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: 400;
-  background-color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.bgColor
-      : Config.darkTheme.bgColor};
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
-  border: 1px solid #c2c2c2;
+  background-color: ${({ theme }) => theme.active};
+  color: ${Config.COLOR.BLACK};
+  border: 0;
+  box-shadow: 0px 0px 4px ${({ theme }) => theme.googleButtonShadow};
   margin-top: 75px;
+`;
+
+export const Text = styled.p`
+  font-size: 20px;
+  color: ${({ theme }) => theme.text};
+  margin-top: 2%;
 `;

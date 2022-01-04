@@ -29,10 +29,7 @@ export const ModalWrapper = styled.div<StyleProps>`
   left: 28%;
   box-sizing: border-box;
   padding: 5rem;
-  background-color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.bgColor
-      : Config.darkTheme.bgColor};
+  background-color: ${({ theme }) => theme.background};
   border-radius: 10px;
 
   button {
@@ -46,10 +43,7 @@ export const Title = styled.p<StyleProps>`
   height: 7%;
   font-size: 36px;
   font-weight: bold;
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const People = styled.p<StyleProps>`
@@ -58,10 +52,7 @@ export const People = styled.p<StyleProps>`
   margin-top: 0.5rem;
   font-size: 16px;
   font-weight: bold;
-  color: ${(props) =>
-    props.mode === "light"
-      ? Config.lightTheme.textColor
-      : Config.darkTheme.textColor};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const TextViewer = styled.div`
@@ -78,6 +69,7 @@ export const Text = styled.p`
   font-size: 16px;
   font-weight: bold;
   overflow: auto;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const ButtonWrapper = styled.div`

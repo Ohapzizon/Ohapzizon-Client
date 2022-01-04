@@ -1,10 +1,11 @@
 import React from "react";
 import { isLoginModalOpen } from "../../../atoms";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { theme } from "../../../atoms";
+import { useRecoilState } from "recoil";
 import * as s from "./Style";
 import * as I from "../../../Assets/index";
-import Googlebutton from "../../../Components/Button/GoogleButton/Googlebutton";
+import Googlebutton from "../../Button/GoogleButton/Googlebutton";
+import useTheme from "../../../hooks/useTheme";
+import { ThemeEnums } from "../../../enum/ThemeEnums";
 
 type modal = {
   visible: boolean;
@@ -15,9 +16,9 @@ interface ModalProps {
 }
 
 const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
-  const themeMode = useRecoilValue(theme);
   const [loginModalIsClose, setLoginModalIsClose] =
     useRecoilState(isLoginModalOpen);
+  const { currentTheme } = useTheme();
 
   function onClose() {
     setLoginModalIsClose(false);
@@ -27,14 +28,14 @@ const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
     <>
       {!loginModalIsClose ? null : (
         <>
-          <s.ModalOverlay
-            visible={modalObj.visible}
-            onClick={onClose}
-            mode={themeMode}
-          />
+          <s.ModalOverlay visible={modalObj.visible} onClick={onClose} />
           <s.ModalWrapper visible={modalObj.visible}>
             <s.LoginWrapper>
-              {themeMode === "light" ? <I.LogoBlack /> : <I.LogoWhite />}
+              {currentTheme === ThemeEnums.LIGHT ? (
+                <I.LogoBlack />
+              ) : (
+                <I.LogoWhite />
+              )}
               <Googlebutton />
             </s.LoginWrapper>
           </s.ModalWrapper>

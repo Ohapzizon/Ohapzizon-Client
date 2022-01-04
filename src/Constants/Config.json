@@ -1,23 +1,26 @@
 {
+  "KEY": {
+    "THEME": "theme"
+  },
   "COLOR": {
     "SEMIBLACK": "#292929",
     "BLACK": "#333333",
     "WEIRDBLACK": "#1B1D1F",
     "LIGHTBLUE": "#80B2FF",
     "BLUE": "#0066FF",
+    "DARKBLUE": "#1400FF",
     "WHITE": "#FFFFFF",
     "GRAY": "#BOABAB",
     "LIGHTGRAY": "#DBDBDB",
-    "SUPERLIGHTGRAY": "#555555"
+    "SUPERLIGHTGRAY": "#555555",
+    "RED": "#E9423F"
   },
-  "lightTheme": {
-    "bgColor": "#FFFFFF",
-    "textColor": "#333333",
-    "activeColor": "#FFFFFF"
+  "BASE_HEADER": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type,Authorization",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,OPTIONS",
+    "Access-Control-Alllow-Credentials": true,
+    "Content-Type": "application/json"
   },
-  "darkTheme": {
-    "bgColor": "#292929",
-    "textColor": "#FFFFFF",
-    "activeColor": "#1B1D1F"
-  }
+  "BASE_URL": "http://localhost:3000"
 }

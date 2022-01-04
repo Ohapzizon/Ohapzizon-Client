@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
-export const InputWrapper = styled.div`
+export const Input = styled.input`
   width: 98.2%;
   height: 12%;
-  position: relative;
-`;
-
-export const Input = styled.input`
-  width: 100%;
   padding: 2vh 1vh 1vh;
   background-color: transparent;
   border: none;
