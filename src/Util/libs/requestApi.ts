@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { BASE_URL, BASE_HEADER } from "../Constants/Config.json";
-import Storage from "./Storage";
+import { BASE_URL, BASE_HEADER } from "../../Constants/Config.json";
+import Storage from "../Storage";
 
 const RequestApi = async (p: AxiosRequestConfig) => {
   try {
