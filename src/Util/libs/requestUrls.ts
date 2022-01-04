@@ -1,6 +1,6 @@
 export const MemberController = {
   googleAuth: () => {
-    return "/auth/google";
+    return "/auth/google/callback";
   },
   googleLogout: () => {
     return "/auth/google/logout";

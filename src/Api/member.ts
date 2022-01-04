@@ -5,7 +5,7 @@ class Member {
   googleAuth() {
     try {
       return RequestApi({
-        method: "POST",
+        method: "GET",
         url: MemberController.googleAuth(),
       });
     } catch (e: any) {
