@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:17.0.2"],
+            ["react-google-login", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.2.2"],
             ["react-is", "npm:17.0.2"],
             ["recoil", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:0.5.2"],
             ["styled-components", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.3.3"],
@@ -4920,6 +4921,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:17.0.2"],
+            ["react-google-login", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.2.2"],
             ["react-is", "npm:17.0.2"],
             ["recoil", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:0.5.2"],
             ["styled-components", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.3.3"],
@@ -5372,6 +5374,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:16.13.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:15.8.0", {
+          "packageLocation": "./.yarn/cache/prop-types-npm-15.8.0-6f60fc44c7-d8d51cf55d.zip/node_modules/prop-types/",
+          "packageDependencies": [
+            ["prop-types", "npm:15.8.0"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"],
+            ["react-is", "npm:16.13.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["public-encrypt", [
@@ -5511,6 +5523,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "packagePeers": [
             "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react-google-login", [
+        ["npm:5.2.2", {
+          "packageLocation": "./.yarn/cache/react-google-login-npm-5.2.2-b989308685-29199c7035.zip/node_modules/react-google-login/",
+          "packageDependencies": [
+            ["react-google-login", "npm:5.2.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.2.2", {
+          "packageLocation": "./.yarn/__virtual__/react-google-login-virtual-2ce84d3ef5/0/cache/react-google-login-npm-5.2.2-b989308685-29199c7035.zip/node_modules/react-google-login/",
+          "packageDependencies": [
+            ["react-google-login", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:5.2.2"],
+            ["@types/react", "npm:17.0.37"],
+            ["@types/react-dom", null],
+            ["prop-types", "npm:15.8.0"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:ee3095ef8df05a5daad8a56fddf5fddb0cda3ad7b50b294330ff45b074e70b6e8f1e067e644881085fb34b5736f84c1f04d14771dd622d0595b8f03ceb02bf71#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
             "react"
           ],
           "linkType": "HARD",

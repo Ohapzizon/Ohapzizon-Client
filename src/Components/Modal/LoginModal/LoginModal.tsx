@@ -7,6 +7,7 @@ import Googlebutton from "../../Button/GoogleButton/Googlebutton";
 import useTheme from "../../../hooks/useTheme";
 import { ThemeEnums } from "../../../enum/ThemeEnums";
 import member from "../../../Api/member";
+import GoogleLogin from "react-google-login";
 
 type modal = {
   visible: boolean;
@@ -16,12 +17,12 @@ interface ModalProps {
   modalObj: modal;
 }
 
-const onGoogleLogin = async () => {
-  try {
-    const res = await member.googleAuth();
-    console.log(res);
-  } catch (e) {}
-};
+// const onGoogleLogin = async () => {
+//   try {
+//     const res = await member.googleAuth();
+//     console.log(res);
+//   } catch (e) {}
+// };
 
 const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
   const [loginModalIsClose, setLoginModalIsClose] =
@@ -44,7 +45,8 @@ const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
               ) : (
                 <I.LogoWhite />
               )}
-              <Googlebutton onClick={onGoogleLogin} />
+              {/* <Googlebutton onClick={onGoogleLogin} /> */}
+              <GoogleLogin clientId={process.env.NEXT_PUBLIC_API_KEY} />
             </s.LoginWrapper>
           </s.ModalWrapper>
         </>
