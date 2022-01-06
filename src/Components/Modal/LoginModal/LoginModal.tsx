@@ -8,6 +8,7 @@ import useTheme from "../../../hooks/useTheme";
 import { ThemeEnums } from "../../../enum/ThemeEnums";
 import member from "../../../Api/member";
 import GoogleLogin from "react-google-login";
+import { MemberController } from "../../../Util/libs/requestUrls";
 
 type modal = {
   visible: boolean;
@@ -46,7 +47,12 @@ const LoginModal: React.FC<ModalProps> = ({ modalObj }) => {
                 <I.LogoWhite />
               )}
               {/* <Googlebutton onClick={onGoogleLogin} /> */}
-              <GoogleLogin clientId={process.env.NEXT_PUBLIC_API_KEY} />
+              <GoogleLogin
+                clientId={process.env.NEXT_PUBLIC_API_KEY}
+                redirectUri="http://localhost:8000/auth/google/callback"
+                responseType="string"
+                scope="repo"
+              />
             </s.LoginWrapper>
           </s.ModalWrapper>
         </>
