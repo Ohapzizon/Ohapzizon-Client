@@ -5,9 +5,9 @@ type StyleProps = {
   mode?: string;
 };
 
-export const Button = styled.button<StyleProps>`
-  width: 37%;
-  height: 37%;
+export const Button = styled.a<StyleProps>`
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
