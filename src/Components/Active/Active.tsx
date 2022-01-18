@@ -14,7 +14,6 @@ const Active = () => {
 
   useEffect(() => {
     onActiveList().then((res) => setActiveList(res.data.data));
-    console.log(activeList);
   }, []);
 
   return (
