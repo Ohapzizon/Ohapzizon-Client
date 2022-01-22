@@ -16,7 +16,7 @@ const callback = () => {
   useEffect(() => {
     getCode().then(async (res) => {
       localStorage.setItem("access_token", res.data.accessToken);
-      localStorage.setItem("refresh_token", res.refreshToken);
+      localStorage.setItem("refresh_token", res.data.refreshToken);
     });
   }, []);
 
