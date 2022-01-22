@@ -32,6 +32,20 @@ class Member {
       throw new Error(e);
     }
   }
+  callback(code: any) {
+    const data = {
+      data: code,
+    };
+    try {
+      return RequestApi({
+        method: "POST",
+        url: MemberController.googleAuth(),
+        data: data,
+      });
+    } catch (e) {
+      throw new Error(e);
+    }
+  }
 }
 
 export default new Member();
