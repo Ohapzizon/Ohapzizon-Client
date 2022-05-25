@@ -8,11 +8,12 @@ import ActiveButton from "../Button/ActiveButton/ActiveButton";
 import ModifyModal from "../Modal/ModifyModal/Modifymodal";
 
 type activeItem = {
-  id: number;
+  post_idx: number;
   title: string;
-  name: string;
-  people: number;
-  content: string;
+  isDayOrNight: string;
+  maxCount: number;
+  contents: string;
+  user: { name: string };
 };
 
 interface ActiveProps {
@@ -34,24 +35,23 @@ const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
         <s.ContentContainer onClick={openModal}>
           <s.TitleContainer>
             <s.Title>{activeObj.title}</s.Title>
-            <span>☀️</span>
+            <span>{activeObj.isDayOrNight === "DAY" ? "☀️" : "🌙"}</span>
           </s.TitleContainer>
           <s.InfoContainer>
-            <s.Personnel>👥 {activeObj.people}명</s.Personnel>
-            <span>{activeObj.name}</span>
+            <s.Personnel>👥 {activeObj.maxCount}명</s.Personnel>
+            <span>{activeObj.user.name}</span>
           </s.InfoContainer>
-          <s.content>{activeObj.content}</s.content>
+          <s.content>{activeObj.contents}</s.content>
         </s.ContentContainer>
-        <ActiveButton onClick={(e) => setOpenModifyModal(true)} />
+        <PullButton />
       </s.Positioner>
       {modalIsOpen && (
         <ViewModal
           modalObj={{
-            id: 1,
-            title: "축구 할 사람",
-            people: 18,
-            content:
-              "저기 운동장에서 축구 한판 땡길분들 밥 얼른 먹고 축구화나 챙겨서 나오세요~",
+            id: activeObj.post_idx,
+            title: activeObj.title,
+            people: activeObj.maxCount,
+            content: activeObj.contents,
             visible: modalIsOpen,
           }}
         />
@@ -59,11 +59,10 @@ const ActiveItem: React.FC<ActiveProps> = ({ activeObj }) => {
       {openModifyModal && (
         <ModifyModal
           modalObj={{
-            id: 1,
-            title: "축구 할 사람",
-            people: 18,
-            content:
-              "저기 운동장에서 축구 한판 땡길분들 밥 얼른 먹고 축구화나 챙겨서 나오세요~",
+            id: activeObj.post_idx,
+            title: activeObj.title,
+            people: activeObj.maxCount,
+            content: activeObj.contents,
             visible: openModifyModal,
           }}
         />

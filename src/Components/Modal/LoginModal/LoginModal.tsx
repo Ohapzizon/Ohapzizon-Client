@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { isLoginModalOpen } from "../../../atoms";
 import { useRecoilState } from "recoil";
 import * as s from "./Style";
